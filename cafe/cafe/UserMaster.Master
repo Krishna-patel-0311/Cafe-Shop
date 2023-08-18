@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="cafe.UserMaster"  %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Home</title>
+
+    <%--Bootstrap--%>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: orange">
+    <form id="form1" runat="server">
+        <br />
+        <main>
+
+            <%--Navbar--%>
+
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: orange">
+                    <a class="navbar-brand" href="#" style="color: black"><b>DASHBOARD</b></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="UserHome.aspx" style="color: white">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: white" href="UserMenu.aspx">Menu</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: white" href="Usercontactus.aspx">Contact</a>
+                            </li>
+
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <a class="btn btn-outline-success mr-3" style="color: white" href="UserProfile.aspx"><i class="bi bi-person-check"></i>&nbsp;Profile</a>
+                            <a class="btn btn-outline-light mr-3" href="UserOrderForm.aspx"><i class="bi bi-cart2 mr-1 align-center"></i>
+                                <asp:Label ID="labe11" runat="server" />'s Cart</a>
+
+                            <asp:Button class="btn btn-outline-danger my-2 my-sm-0" ID="Button2" runat="server" Text="Logout" OnClick="Button2_Click" />
+                        </form>
+                    </div>
+                </nav>
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <%--Footer--%>
+
+            <div>
+                <footer class="text-center text-lg-start  text-muted" style="background-color: #272b2f">
+                    <br />
+                    <section class="">
+                        <div class="container text-center text-md-start mt-5">
+                            <!-- Grid row -->
+                            <div class="row mt-3">
+                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                    <h6 class="text-uppercase fw-bold mb-4">Mcafe
+                                    </h6>
+                                    <p>
+                                        Every day, more than One Thousand guests visit Mcafe around the rajkot. And they do so because our cafe are known for serving high-quality, great-tasting, and affordable food.
+                                    </p>
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    <!-- Links -->
+                                    <h6 class="text-uppercase fw-bold mb-4">Top Product
+                                    </h6>
+                                    <p>
+                                        <a href="#!" class="text-reset">Buger</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-reset">Pizza</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-reset">Coffee</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-reset">Cold Drink</a>
+                                    </p>
+                                </div>
+                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    <h6 class="text-uppercase fw-bold mb-4">Useful Section
+                                    </h6>
+                                    <p>
+                                        <a href="UserMenu.aspx" class="text-reset">Menu</a>
+                                    </p>
+                                    <p>
+                                        <a href="UserOrderForm.aspx" class="text-reset">My Cart</a>
+                                    </p>
+                                    <p>
+                                        <a href="Usercontactus.aspx" class="text-reset">Help</a>
+                                    </p>
+                                </div>
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                                    <p></i>Rajkot, Gujarat - 3600001, INDIA</p>
+                                    <p>
+                                        kunwarpooran8@gmail.com<br />
+                                        kpatel581@rku.ac.in
+                                    </p>
+                                    <p>
+                                        + 91 84870 53712
+                                        <br />
+                                        + 91 90815 35806
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                        © 2022 Copyright :
+                        <a class="text-reset fw-bold">@pooran_kunwar & @krishna_patel</a>
+                    </div>
+                </footer>
+            </div>
+
+        </main>
+
+
+    </form>
+
+    <%--JavaScript--%>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
